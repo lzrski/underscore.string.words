@@ -21,5 +21,8 @@
   "license": "GPL v3",
   "bugs": {
     "url": "https://github.com/lzrski/underscore.string.words/issues"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.3"
   }
 }
