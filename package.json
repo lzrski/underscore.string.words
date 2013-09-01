@@ -1,0 +1,25 @@
+{
+  "name": "underscore.string.words",
+  "version": "0.0.0",
+  "description": "underscore.string.words the right way",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/lzrski/underscore.string.words.git"
+  },
+  "keywords": [
+    "underscore",
+    "string",
+    "words",
+    "split",
+    "extract"
+  ],
+  "author": "Tadeusz Łazurski",
+  "license": "GPL v3",
+  "bugs": {
+    "url": "https://github.com/lzrski/underscore.string.words/issues"
+  }
+}
