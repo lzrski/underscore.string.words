@@ -1,6 +1,6 @@
 {
   "name": "underscore.string.words",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "underscore.string.words the right way",
   "main": "lib/index.js",
   "scripts": {
