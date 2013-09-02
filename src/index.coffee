@@ -2,7 +2,7 @@
 
 # Lowercase word letters.
 # Big thanks to Debilski: http://stackoverflow.com/a/2013539/1151982
-words_re = ///
+re = ///
   [
   a-z
   æðǝəɛɣĳŋœĸſßþƿȝ
@@ -13,4 +13,5 @@ words_re = ///
   ]+
   ///g
 
-module.exports = (text) -> text.toLowerCase().match words_re
+module.exports    = (text) -> text.toLowerCase().match re
+module.exports.re = re # TODO: getter without setter
