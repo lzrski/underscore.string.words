@@ -14,4 +14,4 @@ re = ///
   ///g
 
 module.exports    = (text) -> text.toLowerCase().match re
-module.exports.re = re # TODO: getter without setter
+module.exports.__defineGetter__ "re", -> re
