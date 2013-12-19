@@ -25,6 +25,10 @@ module.exports    = (options, text) ->
     prefix = RegExp options.prefix
     re = RegExp prefix.source + re.source, "g"
 
+  if options.postfix?
+    postfix = RegExp options.postfix
+    re = RegExp re.source + postfix.source, "g"
+
   words = []
   while match = re.exec lower
     index   = match.index
