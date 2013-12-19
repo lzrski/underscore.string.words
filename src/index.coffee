@@ -18,12 +18,19 @@ module.exports    = (options, text) ->
     text    = options
     options = {}
 
-  re = RegExp _re # Clone it so eventual changes won't mutate original
+  re    = RegExp _re # Clone it so eventual changes won't mutate original
+  lower = do text.toLowerCase
 
   if options.prefix?
     prefix = RegExp options.prefix
     re = RegExp prefix.source + re.source, "g"
 
-  text.toLowerCase().match re
+  words = []
+  while match = re.exec lower
+    index   = match.index
+    length  = match[0].length
+    words.push text.slice index, index + length
+
+  return words
 
 module.exports.__defineGetter__ "re", -> _re
