@@ -1,6 +1,7 @@
 do (require "source-map-support").install
 
-words = require "../"
+should  = require "should"
+words   = require "../"
 
 describe "words function", ->
   it "has re property", ->
@@ -51,4 +52,9 @@ describe "words function", ->
       "Warsaw"
     ]
 
+  it "returns null if no text provided", ->
+    should.not.exist words()
+
+  it "returns null if empty text provided", ->
+    should.not.exist words "         "
 

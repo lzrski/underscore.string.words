@@ -18,6 +18,8 @@ module.exports    = (options, text) ->
     text    = options
     options = {}
 
+  if not text then return null
+
   re    = RegExp _re # Clone it so eventual changes won't mutate original
   lower = do text.toLowerCase
 
