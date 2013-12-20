@@ -11,7 +11,7 @@ _re = ///
   ĥḥħıíìiîïǐĭīĩįịĳĵķƙĸĺļłľŀŉńn̈ňñņŋóòôöǒŏōõőọøǿơœ
   ŕřŗſśŝšşșṣßťţṭŧþúùûüǔŭūũűůųụưẃẁŵẅƿýỳŷÿȳỹƴźżžẓ
   ]+
-  ///g
+  ///gi
 
 module.exports    = (options, text) ->
   if not text? and typeof options is "string"
@@ -23,18 +23,12 @@ module.exports    = (options, text) ->
 
   if options.prefix?
     prefix = RegExp options.prefix
-    re = RegExp prefix.source + re.source, "g"
+    re = RegExp prefix.source + re.source, "gi"
 
   if options.postfix?
     postfix = RegExp options.postfix
-    re = RegExp re.source + postfix.source, "g"
+    re = RegExp re.source + postfix.source, "gi"
 
-  words = []
-  while match = re.exec lower
-    index   = match.index
-    length  = match[0].length
-    words.push text.slice index, index + length
-
-  return words
+  return text.match re
 
 module.exports.__defineGetter__ "re", -> _re
