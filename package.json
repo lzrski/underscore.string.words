@@ -4,7 +4,8 @@
   "description": "underscore.string.words the right way",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "install": "make install"
   },
   "repository": {
     "type": "git",
